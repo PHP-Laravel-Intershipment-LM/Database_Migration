@@ -21,8 +21,10 @@ Postgres, \... mà không cần phải chỉnh sửa lại code theo CSDL sử d
 Tạo một migration trong Laravel bằng lệnh:
 
 > php artisan make:migration create\_table\_names\_table \--create=names
+
 Trong thư mục _database/migrations_ xuất hiện một file có tên
 > \...\_create\_table\_names\_table.php
+
 Mở file đó lên, chú ý phương thức _up()_, đó là phương thức sẽ giúp chúng
 ta tạo bảng. Chúng ta chèn thêm các cột hay chỉnh sửa các cột không muốn
 ở trong đây.
@@ -30,7 +32,12 @@ ta tạo bảng. Chúng ta chèn thêm các cột hay chỉnh sửa các cột k
 Sau khi hoàn thành chỉnh sửa, tiến hành chạy lệnh sau để tạo bảng tương
 ứng trong csdl: 
 > php artisan migrate
--   Chú ý: nếu như csdl dữ liệu đã có tồn tại các bảng và chúng ta muốn
-    làm mới toàn bộ các bảng được migrate, chúng ta thêm tùy chọn
+
+-   Chú ý: 
+  - Nếu như csdl dữ liệu đã có tồn tại các bảng và chúng ta muốn
+    rollback toàn bộ các migrate trước, chúng ta thêm tùy chọn
     refresh lúc tạo như sau: 
-> php artisan migrate:refresh
+  > php artisan migrate:refresh
+  
+  - Nếu như muốn xóa toàn bộ bảng trước khi chạy, thêm tùy chọn fresh như sau:
+  > php artisan migrate:fresh
