@@ -34,10 +34,10 @@ Sau khi hoàn thành chỉnh sửa, tiến hành chạy lệnh sau để tạo b
 > php artisan migrate
 
 -   Chú ý: 
-  - Nếu như csdl dữ liệu đã có tồn tại các bảng và chúng ta muốn
+   - Nếu như csdl dữ liệu đã có tồn tại các bảng và chúng ta muốn
     rollback toàn bộ các migrate trước, chúng ta thêm tùy chọn
     refresh lúc tạo như sau: 
-  > php artisan migrate:refresh
+   > php artisan migrate:refresh
   
-  - Nếu như muốn xóa toàn bộ bảng trước khi chạy, thêm tùy chọn fresh như sau:
-  > php artisan migrate:fresh
+   - Nếu như muốn xóa toàn bộ bảng trước khi chạy, thêm tùy chọn fresh như sau:
+   > php artisan migrate:fresh
